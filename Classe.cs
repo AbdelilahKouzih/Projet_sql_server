@@ -213,5 +213,11 @@ namespace Projet_sql_server
             p.Show();
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Etudiant et = new Etudiant();
+            et.Show();
+        }
     }
 }

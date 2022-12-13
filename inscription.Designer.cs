@@ -49,6 +49,7 @@
             this.btnajouter = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dglcmd = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Commande);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -72,6 +74,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(945, 313);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Commande
             // 
@@ -91,6 +94,7 @@
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "Durée";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -100,6 +104,7 @@
             this.label2.Size = new System.Drawing.Size(42, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "Date :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -109,6 +114,7 @@
             this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "ID classe :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtnump
             // 
@@ -117,6 +123,7 @@
             this.txtnump.Name = "txtnump";
             this.txtnump.Size = new System.Drawing.Size(231, 30);
             this.txtnump.TabIndex = 6;
+            this.txtnump.TextChanged += new System.EventHandler(this.txtnump_TextChanged);
             // 
             // txtnumcmd
             // 
@@ -125,6 +132,7 @@
             this.txtnumcmd.Name = "txtnumcmd";
             this.txtnumcmd.Size = new System.Drawing.Size(231, 30);
             this.txtnumcmd.TabIndex = 5;
+            this.txtnumcmd.TextChanged += new System.EventHandler(this.txtnumcmd_TextChanged);
             // 
             // txtnumc
             // 
@@ -133,6 +141,7 @@
             this.txtnumc.Name = "txtnumc";
             this.txtnumc.Size = new System.Drawing.Size(231, 30);
             this.txtnumc.TabIndex = 4;
+            this.txtnumc.TextChanged += new System.EventHandler(this.txtnumc_TextChanged);
             // 
             // txtquantite
             // 
@@ -141,6 +150,7 @@
             this.txtquantite.Name = "txtquantite";
             this.txtquantite.Size = new System.Drawing.Size(231, 33);
             this.txtquantite.TabIndex = 3;
+            this.txtquantite.TextChanged += new System.EventHandler(this.txtquantite_TextChanged);
             // 
             // txtlcmd
             // 
@@ -149,6 +159,7 @@
             this.txtlcmd.Name = "txtlcmd";
             this.txtlcmd.Size = new System.Drawing.Size(231, 30);
             this.txtlcmd.TabIndex = 2;
+            this.txtlcmd.TextChanged += new System.EventHandler(this.txtlcmd_TextChanged);
             // 
             // lbldatecmd
             // 
@@ -158,6 +169,7 @@
             this.lbldatecmd.Size = new System.Drawing.Size(76, 16);
             this.lbldatecmd.TabIndex = 1;
             this.lbldatecmd.Text = "ID étudiant :";
+            this.lbldatecmd.Click += new System.EventHandler(this.lbldatecmd_Click);
             // 
             // lbllcmd
             // 
@@ -167,6 +179,7 @@
             this.lbllcmd.Size = new System.Drawing.Size(89, 16);
             this.lbllcmd.TabIndex = 0;
             this.lbllcmd.Text = "ID inscription :";
+            this.lbllcmd.Click += new System.EventHandler(this.lbllcmd_Click);
             // 
             // panel2
             // 
@@ -180,6 +193,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(945, 97);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnannuler
             // 
@@ -248,6 +262,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(945, 256);
             this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dglcmd
             // 
@@ -258,6 +273,17 @@
             this.dglcmd.RowTemplate.Height = 24;
             this.dglcmd.Size = new System.Drawing.Size(945, 245);
             this.dglcmd.TabIndex = 0;
+            this.dglcmd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dglcmd_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(759, 76);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(174, 37);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Etudiant";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // inscription
             // 
@@ -302,5 +328,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dglcmd;
         private System.Windows.Forms.Button Commande;
+        private System.Windows.Forms.Button button1;
     }
 }

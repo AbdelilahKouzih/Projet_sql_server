@@ -52,6 +52,12 @@
     <Compile Include="Classe.Designer.cs">
       <DependentUpon>Classe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Etudiant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etudiant.Designer.cs">
+      <DependentUpon>Etudiant.cs</DependentUpon>
+    </Compile>
     <Compile Include="inscription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Classe.resx">
       <DependentUpon>Classe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etudiant.resx">
+      <DependentUpon>Etudiant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inscription.resx">
       <DependentUpon>inscription.cs</DependentUpon>
