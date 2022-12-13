@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace Projet_sql_server
 {
-    public partial class Commande : Form
+    public partial class Classe : Form
     {
         private int Verif;
-        public Commande()
+        public Classe()
         {
             InitializeComponent();
         }
 
-        static string chaine = @"Data Source=DESKTOP-ID5FAVQ\SQLEXPRESS;Initial Catalog=VENTES;Integrated Security=True";
+        static string chaine = @"Data Source=DESKTOP-ID5FAVQ\SQLEXPRESS;Initial Catalog=inscription;Integrated Security=True";
 
         static SqlConnection cnx = new SqlConnection(chaine);
         static SqlCommand cmd = new SqlCommand();
@@ -138,7 +138,7 @@ namespace Projet_sql_server
         private void btnafficher_Click(object sender, EventArgs e)
         {
             connection();
-            cmd.CommandText = "execute AffichageCommande";
+            cmd.CommandText = "execute AffichageClasse";
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dgcmd.DataSource = dt;
@@ -159,6 +159,8 @@ namespace Projet_sql_server
             btnvalider.Enabled = false;
         }
 
+
+       
         private void btnvalider_Click(object sender, EventArgs e)
         {
 
@@ -171,7 +173,7 @@ namespace Projet_sql_server
                 }
                 connection();
 
-                cmd.CommandText = " execute InsertionCommande N'" + txtcmd.Text + "',N'" + txtdatecmd.Text + "'";
+                cmd.CommandText = " execute InsertionClasse N'" + txtcmd.Text + "',N'" + txtdatecmd.Text + "'";
                 cmd.ExecuteNonQuery();
                 etatinitial();
 
@@ -182,7 +184,7 @@ namespace Projet_sql_server
             {
                 connection();
 
-                cmd.CommandText = " execute Update_Commande N'" + txtcmd.Text + "',N'" + txtdatecmd.Text + "'";
+                cmd.CommandText = " execute Update_Classe N'" + txtcmd.Text + "',N'" + txtdatecmd.Text + "'";
                 cmd.ExecuteNonQuery();
                 etatinitial();
                 cnx.Close();
@@ -194,7 +196,7 @@ namespace Projet_sql_server
                 MessageBox.Show("vous avez sûre !!");
                 connection();
 
-                cmd.CommandText = " execute Suppresion_Commande N'" + txtcmd.Text + "'";
+                cmd.CommandText = " execute SuppresionClasse N'" + txtcmd.Text + "'";
                 cmd.ExecuteNonQuery();
                 etatinitial();
                 MessageBox.Show("la ligne a été bien supprimer");
@@ -203,6 +205,13 @@ namespace Projet_sql_server
 
             }
         }
-    
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            inscription p = new inscription();
+
+            p.Show();
+            
+        }
     }
 }

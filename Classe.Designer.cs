@@ -1,6 +1,6 @@
 ﻿namespace Projet_sql_server
 {
-    partial class Commande
+    partial class Classe
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtdatecmd = new System.Windows.Forms.TextBox();
             this.txtcmd = new System.Windows.Forms.TextBox();
             this.lbldatecmd = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtdatecmd);
             this.panel1.Controls.Add(this.txtcmd);
             this.panel1.Controls.Add(this.lbldatecmd);
@@ -58,6 +60,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(945, 217);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(770, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 40);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Inscription";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtdatecmd
             // 
@@ -80,18 +92,18 @@
             this.lbldatecmd.AutoSize = true;
             this.lbldatecmd.Location = new System.Drawing.Point(76, 103);
             this.lbldatecmd.Name = "lbldatecmd";
-            this.lbldatecmd.Size = new System.Drawing.Size(75, 16);
+            this.lbldatecmd.Size = new System.Drawing.Size(81, 16);
             this.lbldatecmd.TabIndex = 1;
-            this.lbldatecmd.Text = "Date CMD :";
+            this.lbldatecmd.Text = "Description :";
             // 
             // lblcmd
             // 
             this.lblcmd.AutoSize = true;
             this.lblcmd.Location = new System.Drawing.Point(76, 54);
             this.lblcmd.Name = "lblcmd";
-            this.lblcmd.Size = new System.Drawing.Size(94, 16);
+            this.lblcmd.Size = new System.Drawing.Size(69, 16);
             this.lblcmd.TabIndex = 0;
-            this.lblcmd.Text = "Numéro CMD :";
+            this.lblcmd.Text = "ID classe :";
             // 
             // panel2
             // 
@@ -220,6 +232,7 @@
         private System.Windows.Forms.Button btnajouter;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgcmd;
+        private System.Windows.Forms.Button button1;
     }
 }
 

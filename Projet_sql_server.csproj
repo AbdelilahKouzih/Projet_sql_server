@@ -46,25 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commande.cs">
+    <Compile Include="Classe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Commande.Designer.cs">
-      <DependentUpon>Commande.cs</DependentUpon>
+    <Compile Include="Classe.Designer.cs">
+      <DependentUpon>Classe.cs</DependentUpon>
     </Compile>
-    <Compile Include="LigneCommande.cs">
+    <Compile Include="inscription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LigneCommande.Designer.cs">
-      <DependentUpon>LigneCommande.cs</DependentUpon>
+    <Compile Include="inscription.Designer.cs">
+      <DependentUpon>inscription.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Commande.resx">
-      <DependentUpon>Commande.cs</DependentUpon>
+    <EmbeddedResource Include="Classe.resx">
+      <DependentUpon>Classe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LigneCommande.resx">
-      <DependentUpon>LigneCommande.cs</DependentUpon>
+    <EmbeddedResource Include="inscription.resx">
+      <DependentUpon>inscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

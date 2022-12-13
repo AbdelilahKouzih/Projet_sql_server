@@ -16,7 +16,7 @@ namespace Projet_sql_server
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Commande());
+            Application.Run(new Classe());
         }
     }
 }
